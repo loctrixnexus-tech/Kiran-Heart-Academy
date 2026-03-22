@@ -1,0 +1,251 @@
+/* PAGE BASE */
+
+/* ================= HERO (KEEP SAME) ================= */
+.acad-hero{
+height:60vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+overflow:hidden;
+background:url("../assets/academic.jpg") center/cover no-repeat;
+}
+
+/* DARK LAYER ONLY INSIDE HERO */
+.acad-hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.2);
+}
+
+/* TEXT ABOVE */
+.hero-text{
+position:relative;
+z-index:2;
+}
+
+.hero-text h1{
+font-size:48px;
+font-weight:700;
+}
+
+.hero-text p{
+margin-top:10px;
+font-size:18px;
+}
+
+/* ================= ACADEMIC APPROACH ================= */
+.acad-section{
+padding:80px 10%;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.acad-section h2{
+font-size:36px;
+margin-bottom:20px;
+font-weight:700;
+color:#1e293b;
+}
+
+.acad-section p{
+font-size:16px;
+color:#64748b;
+line-height:1.7;
+}
+
+/* ================= CARDS ================= */
+.acad-cards{
+display:flex;
+justify-content:center;
+gap:30px;
+padding:40px 10%;
+flex-wrap:wrap;
+}
+
+.acad-card{
+flex:1;
+max-width:350px;
+padding:30px;
+border-radius:20px;
+background:white;
+box-shadow:0 15px 40px rgba(0,0,0,0.08);
+transition:0.3s;
+text-align:center;
+}
+
+.acad-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(37,99,235,0.2);
+}
+
+.acad-card h3{
+margin-bottom:10px;
+font-size:20px;
+color:#1e293b;
+}
+
+.acad-card p{
+color:#64748b;
+}
+
+/* ================= SKILLS ================= */
+.skills{
+padding:80px 10%;
+text-align:center;
+background:#f1f5f9;
+}
+
+.skills h2{
+font-size:34px;
+margin-bottom:40px;
+color:#1e293b;
+}
+
+.skill-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.skill{
+padding:25px;
+border-radius:18px;
+background:white;
+box-shadow:0 10px 30px rgba(0,0,0,0.07);
+transition:0.3s;
+}
+
+.skill:hover{
+transform:translateY(-8px);
+background:#2563eb;
+color:white;
+}
+
+.skill h4{
+margin-bottom:8px;
+}
+
+/* ================= PROCESS ================= */
+.process{
+padding:80px 10%;
+text-align:center;
+}
+
+.process h2{
+margin-bottom:40px;
+font-size:32px;
+color:#1e293b;
+}
+
+.process-grid{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+}
+
+.process-grid div{
+padding:12px 25px;
+border-radius:30px;
+background:linear-gradient(135deg,#2563eb,#3b82f6);
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+.process-grid div:hover{
+transform:scale(1.1);
+}
+
+/* ================= QUALITY ================= */
+.quality{
+padding:80px 10%;
+display:flex;
+justify-content:center;
+}
+
+.quality-box{
+max-width:900px;
+background:white;
+padding:40px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.08);
+text-align:center;
+}
+
+.quality-box h2{
+font-size:30px;
+margin-bottom:15px;
+color:#1e293b;
+}
+
+.quality-box p{
+color:#64748b;
+line-height:1.6;
+}
+
+/* ================= TEACHERS (FULL WIDTH 🔥) ================= */
+.teachers{
+padding:100px 0;
+background:linear-gradient(135deg,#1e3a8a,#3b82f6);
+color:white;
+text-align:center;
+}
+
+.teachers h2{
+font-size:36px;
+margin-bottom:15px;
+}
+
+.teachers p{
+max-width:800px;
+margin:auto;
+opacity:0.9;
+line-height:1.6;
+}
+
+/* ================= ANIMATION ================= */
+.acad-card,
+.skill,
+.quality-box{
+animation:fadeUp 0.8s ease;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:32px;
+}
+
+.acad-cards{
+flex-direction:column;
+align-items:center;
+}
+
+.skill-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+.academics-page{
+min-height:100vh;
+overflow-x:hidden;
+}

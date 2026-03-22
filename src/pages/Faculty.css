@@ -1,0 +1,162 @@
+.faculty-page{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#f8fafc,#e2e8f0);
+min-height:100vh;
+}
+
+/* HERO */
+.faculty-hero{
+height:50vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+url("../assets/faculty.jpg") center/cover no-repeat;
+}
+
+.faculty-hero h1{
+font-size:48px;
+font-weight:700;
+}
+
+.faculty-hero p{
+margin-top:10px;
+font-size:18px;
+opacity:0.9;
+}
+
+/* ========================= */
+/* LEADERS SECTION */
+/* ========================= */
+
+.leaders{
+display:flex;
+justify-content:center;
+gap:40px;
+padding:60px 10%;
+flex-wrap:wrap;
+}
+
+.leader-card{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+width:260px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+
+.leader-card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 25px 60px rgba(37,99,235,0.25);
+}
+
+.leader-card img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:15px;
+border:4px solid #2563eb;
+}
+
+.leader-card h2{
+font-size:20px;
+margin-bottom:5px;
+color:#1e293b;
+}
+
+.leader-card p{
+color:#2563eb;
+font-weight:600;
+}
+
+/* ========================= */
+/* TEACHERS GRID */
+/* ========================= */
+
+.teacher-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:40px 8% 80px;
+}
+
+/* CARD */
+.teacher-card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+max-width:320px;
+margin:auto;
+}
+
+.teacher-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 45px rgba(37,99,235,0.25);
+}
+
+/* IMAGE */
+.teacher-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+/* INFO */
+.teacher-info{
+padding:15px;
+}
+
+.teacher-info h3{
+font-size:16px;
+font-weight:600;
+color:#1e293b;
+margin-bottom:4px;
+}
+
+/* ROLE */
+.role{
+color:#2563eb;
+font-size:14px;
+margin-bottom:6px;
+font-weight:500;
+}
+
+/* QUALIFICATION BADGE 🔥 */
+.qual{
+font-size:13px;
+font-weight:700;
+color:#0f172a;
+background:#e0ecff;
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+}
+
+/* HOVER EFFECT FOR QUALIFICATION */
+.teacher-card:hover .qual{
+background:#2563eb;
+color:white;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+.teacher-grid{
+grid-template-columns:repeat(auto-fit,minmax(260px,280px));
+justify-content:center;
+}
+.leader-card{
+width:100%;
+max-width:300px;
+}
+
+}
